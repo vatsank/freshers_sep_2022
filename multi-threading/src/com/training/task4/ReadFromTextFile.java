@@ -1,5 +1,7 @@
 package com.training.task4;
 
+import java.io.File;
+
 public class ReadFromTextFile implements Runnable {
 
 	/*
@@ -10,7 +12,22 @@ public class ReadFromTextFile implements Runnable {
 	 */
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
+
+		try {
+			
+			File textFile = new File("Data.txt");
+			
+			 if(textFile.length()==0) {
+				 wait();
+			 }
+			readFromFile(textFile);
+		} catch (Exception e) {
+             e.printStackTrace();
+		}
+	}
+
+	private void readFromFile(File textFile) {
+		
 		
 	}
 
