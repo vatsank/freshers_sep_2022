@@ -19,23 +19,24 @@ public class StudentRepositoryImpl implements CrudRepository<Student> {
 	public boolean save(Student obj) {
 
 		String sql = "insert into lumen_student values(?,?,?)";
-		int rowUpdated =0;
-		try {
+		
+		int rowAdded =0;
+
+		try (PreparedStatement pstmt = con.prepareStatement(sql)){
 			
-			PreparedStatement pstmt = con.prepareStatement(sql);
 			
 			pstmt.setInt(1, obj.getRollNumber());
 			pstmt.setString(2, obj.getFirstName());
 			pstmt.setDouble(3, obj.getMarkScored());
 			
-			rowUpdated = pstmt.executeUpdate();
+			rowAdded = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
 
 			e.printStackTrace();
 		}
 		
-		return rowUpdated==1?true:false;
+		return rowAdded==1?true:false;
 	}
 
 	@Override
@@ -43,22 +44,17 @@ public class StudentRepositoryImpl implements CrudRepository<Student> {
 
 		List<Student> studList = new ArrayList<>();
 		
-		try {
+		String sql = "select * from lumen_student";
+
+		try(PreparedStatement pstmt = con.prepareStatement(sql)) {
 		
-			String sql = "select * from lumen_student";
 			
-			PreparedStatement pstmt = con.prepareStatement(sql);
 			
 			ResultSet rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
 				
-				// propName (From the Student Class)  = columnName from the lumen_student table
-				int rollNumber = rs.getInt("rollNumber");
-				String firstName = rs.getString("firstName");
-				double markScored = rs.getDouble("markScored");
-				
-				Student obj = new Student(rollNumber, firstName, markScored);
+				Student obj =mapRowToObject(rs);
 				
 				studList.add(obj);
 				
@@ -74,8 +70,86 @@ public class StudentRepositoryImpl implements CrudRepository<Student> {
 
 	@Override
 	public boolean delete(Student obj) throws ElementNotFoundException {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return deleteById(obj.getRollNumber());
+		
 	}
 
+	@Override
+	public boolean deleteById(int key) throws ElementNotFoundException {
+		
+		String sql = "delete from lumen_student where rollNumber=?";
+
+		Student found =findById(key);  
+		
+		int rowDeleted=0;
+
+			
+		
+		
+		try(PreparedStatement pstmt = con.prepareStatement(sql)) {
+		
+			pstmt.setInt(1, key);
+			
+			 rowDeleted  = pstmt.executeUpdate();
+			
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		return rowDeleted==1?true:false;
+
+	}
+
+	@Override
+	public Student findById(int key) throws ElementNotFoundException {
+
+		String sql = "select * from lumen_student where rollNumber=?";
+
+		Student student=null;
+		
+		try(PreparedStatement pstmt = con.prepareStatement(sql)) {
+		
+			pstmt.setInt(1, key);
+			
+			ResultSet rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				
+				student =mapRowToObject(rs);
+				
+				
+			}
+			
+			if(student==null) {
+				throw new ElementNotFoundException("ERR-102","Element with Given Id "+ key+" Not Found");
+			}
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		
+		return student;
+		
+	}
+
+	private Student mapRowToObject(ResultSet rs) throws SQLException {
+	
+		int rollNumber = rs.getInt("rollNumber");
+		String firstName = rs.getString("firstName");
+		double markScored = rs.getDouble("markScored");
+		
+		return  new Student(rollNumber, firstName, markScored);
+
+	}
+
+	@Override
+	public int update(Student obj) {
+
+		
+		  
+		return 0;
+	}
 }
