@@ -70,11 +70,11 @@ public class ExceptionHandling {
 
 		} catch (ClassCastException e) {
 
-			System.err.println("ERR-102 - Illegal Casting ");
-			//e.printStackTrace();
+			
 		}
 		
 		System.out.println("Done !"); // this line always gets executed
+		
 		
 	}
 	
