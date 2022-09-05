@@ -23,13 +23,8 @@ public class ConnectionFactory {
 		} catch (SQLException e) {
 
 			 e.printStackTrace();
-		}finally {
-			try {
-				con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
+		
 		
 		return con;
 	}
