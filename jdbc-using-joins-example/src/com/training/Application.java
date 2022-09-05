@@ -18,7 +18,7 @@ public class Application {
 		
 		//System.out.println("Row Added :="+ service.addCourse(java));
 		
-		 String srchCourse="Dot Net";
+		 String srchCourse="Core Java";
 		 Course course =service.findByCourseName(srchCourse);
 		
 		 System.out.println("===============================");
