@@ -18,10 +18,11 @@ public class Application {
 		
 		//System.out.println("Row Added :="+ service.addCourse(java));
 		
-		 String srchCourse="Core Jva";
+		 String srchCourse="Dot Net";
 		 Course course =service.findByCourseName(srchCourse);
 		
-		 System.out.println("Details of Course "+srchCourse);
+		 System.out.println("===============================");
+		 System.out.println(srchCourse +" Participants");
 		 System.out.println("===============================");
 		 for(Participant eachParticipant:course.getList()) {
 			 
