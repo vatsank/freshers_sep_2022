@@ -1,0 +1,16 @@
+Create a Java Class with the following two methods 
+
+  public boolean add(Student obj);
+  public List<Student> findAll();
+  
+  
+  1) The Add Method should return boolean value true 
+    if the elements gets added to a collection.
+   
+   2) It Should Throw  RunTimeException 
+       if the element is already in the collection
+   
+   3) The Find All method should not throw null 
+   
+   4) The Find All method should return a List whose size is always greater than 3
+   
