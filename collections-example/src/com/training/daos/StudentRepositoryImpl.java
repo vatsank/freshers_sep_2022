@@ -28,9 +28,8 @@ public class StudentRepositoryImpl implements CrudRepository<Student> {
 		if(isExisit) {
 			throw new RuntimeException("Element Already Exisit");
 		} else {
-			boolean result = this.studentList.add(obj);
+			return  this.studentList.add(obj);
 			
-			return result;
 		}
 		
 	}
