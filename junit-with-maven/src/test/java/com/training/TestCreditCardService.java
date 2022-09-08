@@ -16,8 +16,8 @@ public class TestCreditCardService {
 		service= new CrediCardService();
 	}
 
-	@Test
 	@DisplayName(value="Test is valid method return true for cardNumber 922 and for other cards false")
+	@Test
 	void testIsValid() {
 		
 		assertAll("Testing isValid Method",
@@ -27,9 +27,9 @@ public class TestCreditCardService {
 		
 	}
 	
-	@Test
 	@DisplayName(value="get credit limit method returns 500000 for card Numbers greater than 99999 and "
 			+ "for others its 600000")
+	@Test
 	void testGetCreditLimit() {
 		
 		assertAll("Testing getCredit Limit Method",
