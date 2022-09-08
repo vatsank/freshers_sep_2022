@@ -2,6 +2,7 @@ package com.training;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -38,4 +39,11 @@ public class TestCreditCardService {
 				);
 
 	}
+	
+	@Test
+	void testDummy() {
+		
+		fail("Not yet implemented");
+	}
+	
 }

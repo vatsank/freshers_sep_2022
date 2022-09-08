@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: vatsa
+Build-Jdk: 11.0.9
+Main-Class: com.training.App
+Created-By: Maven Integration for Eclipse
+
