@@ -33,10 +33,10 @@ public class AnnotationProcessor {
 
 			for(Field eachField : idRefs) {
 				
-				MyId ref =eachField.getAnnotation(MyId.class);
+				boolean isPresent =eachField.isAnnotationPresent(MyId.class);
 			
-				if(ref !=null) {
-					 primaryKey = ref.columnName();
+				if(isPresent) {
+					 primaryKey = eachField.getAnnotation(MyId.class).columnName();
 	    			}
 			}
 				

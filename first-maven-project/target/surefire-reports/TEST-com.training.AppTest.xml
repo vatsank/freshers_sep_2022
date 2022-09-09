@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.training.AppTest" time="0.045" tests="0" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.training.AppTest" time="0.047" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -7,7 +7,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="E:\training\training_workspaces\lumen_2022\first-maven-project\target\test-classes;E:\training\training_workspaces\lumen_2022\first-maven-project\target\classes;C:\Users\vatsa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0\junit-jupiter-api-5.8.0.jar;C:\Users\vatsa\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\vatsa\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0\junit-platform-commons-1.8.0.jar;C:\Users\vatsa\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="java.class.path" value="C:\Users\vatsa\git\freshers_sep_2022\first-maven-project\target\test-classes;C:\Users\vatsa\git\freshers_sep_2022\first-maven-project\target\classes;C:\Users\vatsa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0\junit-jupiter-api-5.8.0.jar;C:\Users\vatsa\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\vatsa\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0\junit-platform-commons-1.8.0.jar;C:\Users\vatsa\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\vatsa\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;"/>
     <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -18,20 +18,20 @@
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="E:\Program Files\jdk1.8.0_342\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\vatsa\AppData\Local\Temp\surefire740200370175407791\surefirebooter3001430119953667759.jar C:\Users\vatsa\AppData\Local\Temp\surefire740200370175407791 2022-09-08T07-35-59_766-jvmRun1 surefire2738044060131577958tmp surefire_07229701745966033366tmp"/>
-    <property name="surefire.test.class.path" value="E:\training\training_workspaces\lumen_2022\first-maven-project\target\test-classes;E:\training\training_workspaces\lumen_2022\first-maven-project\target\classes;C:\Users\vatsa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0\junit-jupiter-api-5.8.0.jar;C:\Users\vatsa\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\vatsa\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0\junit-platform-commons-1.8.0.jar;C:\Users\vatsa\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="sun.java.command" value="C:\Users\vatsa\AppData\Local\Temp\surefire6092890638326914509\surefirebooter-20220908192121794_3.jar C:\Users\vatsa\AppData\Local\Temp\surefire6092890638326914509 2022-09-08T19-21-21_367-jvmRun1 surefire-20220908192121794_1tmp surefire_0-20220908192121794_2tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\vatsa\git\freshers_sep_2022\first-maven-project\target\test-classes;C:\Users\vatsa\git\freshers_sep_2022\first-maven-project\target\classes;C:\Users\vatsa\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.0\junit-jupiter-api-5.8.0.jar;C:\Users\vatsa\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\vatsa\.m2\repository\org\junit\platform\junit-platform-commons\1.8.0\junit-platform-commons-1.8.0.jar;C:\Users\vatsa\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\vatsa\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\vatsa"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.home" value="E:\Program Files\jdk1.8.0_342\jre"/>
-    <property name="basedir" value="E:\training\training_workspaces\lumen_2022\first-maven-project"/>
+    <property name="basedir" value="C:\Users\vatsa\git\freshers_sep_2022\first-maven-project"/>
     <property name="file.separator" value="\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\vatsa\AppData\Local\Temp\surefire740200370175407791\surefirebooter3001430119953667759.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\vatsa\AppData\Local\Temp\surefire6092890638326914509\surefirebooter-20220908192121794_3.jar"/>
     <property name="sun.boot.class.path" value="E:\Program Files\jdk1.8.0_342\jre\lib\resources.jar;E:\Program Files\jdk1.8.0_342\jre\lib\rt.jar;E:\Program Files\jdk1.8.0_342\jre\lib\sunrsasign.jar;E:\Program Files\jdk1.8.0_342\jre\lib\jsse.jar;E:\Program Files\jdk1.8.0_342\jre\lib\jce.jar;E:\Program Files\jdk1.8.0_342\jre\lib\charsets.jar;E:\Program Files\jdk1.8.0_342\jre\lib\jfr.jar;E:\Program Files\jdk1.8.0_342\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -47,7 +47,7 @@
     <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-8/issues/"/>
     <property name="java.io.tmpdir" value="C:\Users\vatsa\AppData\Local\Temp\"/>
     <property name="java.version" value="1.8.0_342"/>
-    <property name="user.dir" value="E:\training\training_workspaces\lumen_2022\first-maven-project"/>
+    <property name="user.dir" value="C:\Users\vatsa\git\freshers_sep_2022\first-maven-project"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -60,4 +60,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
+  <testcase name="shouldAnswerWithTrue" classname="com.training.AppTest" time="0.029"/>
 </testsuite>
