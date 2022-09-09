@@ -1,10 +1,8 @@
 package com.training.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
+import java.time.LocalDate;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,22 +10,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.training.model.Student;
-import com.training.services.StudentService;
 
 /**
- * Servlet implementation class StudentServlet
+ * Servlet implementation class AddStudentServlet
  */
-@WebServlet("/student")
-public class StudentServlet extends HttpServlet {
-	
-	
-	
+@WebServlet("/addStudent")
+public class AddStudentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public StudentServlet() {
+    public AddStudentServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,14 +30,8 @@ public class StudentServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-
-	 request.setAttribute( "heading","National Institute of Technology");
-	
-	RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
-
-	 dispatcher.forward(request, response);
-	 
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -51,23 +39,22 @@ public class StudentServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		    String studentName =request.getParameter("studentName");
-	
-		    StudentService service = new StudentService();
-		    
-		    List<Student> list = service.findByName(studentName);
-		    
-		    
-		    
-		    request.setAttribute("list", list);
-		    
-		    RequestDispatcher dispatcher = request.getRequestDispatcher("displaystudents.jsp");
-
-			 dispatcher.forward(request, response);
-
-		    
-		    
+		 String strRollNumber=  request.getParameter("rollNumber");
+		 	int rollNumber = Integer.parseInt(strRollNumber);
+		 
+		   String firstName = request.getParameter("firstName");
+		   
+		   String strMark = request.getParameter("markScored");
+		     double markScored = Double.parseDouble(strMark);
+		   
+		  String strDate = request.getParameter("dateOfBirth");
+		  
+		  LocalDate dateOfBirth = LocalDate.parse(strDate);
+		  
+		  Student obj = new Student(rollNumber, firstName, markScored,dateOfBirth);
+		  
+		 
+		  System.out.println(obj);
 	}
 
-	
 }
