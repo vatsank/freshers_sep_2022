@@ -17,18 +17,13 @@ public class ConnectionFactory {
 			String userName= bundle.getString("datasource.username");
 			String password = bundle.getString("datasource.password");
 			
+			Class.forName("com.mysql.cj.jdbc.Driver");
 		con =	DriverManager.getConnection(url, userName,password);
 		
 			
-		} catch (SQLException e) {
+		} catch (SQLException | ClassNotFoundException e) {
 
 			 e.printStackTrace();
-		}finally {
-			try {
-				con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 		
 		return con;
